@@ -8,7 +8,7 @@ class CnnDQN(nn.Module):
     def __init__(self, inputs_shape, num_actions):
         super(CnnDQN, self).__init__()
 
-        self.inut_shape = inputs_shape
+        self.input_shape = inputs_shape
         self.num_actions = num_actions
 
         self.features = nn.Sequential(
@@ -33,7 +33,7 @@ class CnnDQN(nn.Module):
         return x
 
     def features_size(self):
-        return self.features(torch.zeros(1, *self.inut_shape)).view(1, -1).size(1)
+        return self.features(torch.zeros(1, *self.input_shape)).view(1, -1).size(1)
 
 
 class DuelDQN(nn.Module):
