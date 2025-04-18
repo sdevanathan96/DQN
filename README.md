@@ -39,10 +39,10 @@ python atari_ppo.py --train --environment PongNoFrameskip-v4
 
 ```bash
 # Test a trained DQN model
-python atari_dqn.py --test --model-path path/to/model.pkl
+python atari_dqn.py --test --model-path sample_model/model_best_dqn.pkl --environment PongNoFrameskip-v4
 
 # Test a trained PPO model
-python atari_ppo.py --test --model-path path/to/model.pkl
+python atari_ppo.py --test --model-path sample_model/model_best_ppo.pkl --environment PongNoFrameskip-v4
 ```
 
 ### Resuming Training from a Checkpoint
