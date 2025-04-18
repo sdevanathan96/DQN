@@ -20,9 +20,7 @@ class DQNTrainer(BaseTrainer):
     
     def train_step(self, frame_count):
         """Perform DQN update"""
-        if self.agent.buffer.size() > self.config.batch_size:
-            return self.agent.learning(frame_count)
-        return 0
+        return self.agent.learning(frame_count)
     
     def should_update(self):
         """DQN updates on every step if buffer is large enough"""

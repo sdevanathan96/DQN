@@ -11,6 +11,7 @@ def configure_ppo(config):
     config.max_buff = 10000
     config.batch_size = 64
     config.print_interval = 10000
+    config.learning_rate = 2.5e-4
     return config
 
 if __name__ == '__main__':
